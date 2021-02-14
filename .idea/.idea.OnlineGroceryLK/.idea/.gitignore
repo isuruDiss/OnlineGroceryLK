@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.OnlineGroceryLK.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\.idea\.idea.OnlineGroceryLK\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

@@ -90,6 +90,8 @@ namespace OnlineGroceryLK.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
+            string role = Request.Form["rdUserRole"].ToString();
+
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
@@ -124,6 +126,32 @@ namespace OnlineGroceryLK.Areas.Identity.Pages.Account
 
                     _logger.LogInformation("User created a new account with password.");
 
+                    if (role == SD.Supplier)
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.Supplier);
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        return LocalRedirect(returnUrl);
+                    }
+                    else
+                    {
+                        
+                            if (role == SD.Admin)
+                            {
+                                await _userManager.AddToRoleAsync(user, SD.Admin);
+                            }
+                            else
+                            {
+                                await _userManager.AddToRoleAsync(user, SD.CustomerEndUser);
+                                await _signInManager.SignInAsync(user, isPersistent: false);
+                                return LocalRedirect(returnUrl);
+                            }
+                        
+                    }
+
+                    return RedirectToAction("Index", "User", new { area = "Admin" });
+                    _logger.LogInformation("User created a new account with password");
+
+
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     //var callbackUrl = Url.Page(
@@ -141,8 +169,8 @@ namespace OnlineGroceryLK.Areas.Identity.Pages.Account
                     //}
                     //else
                     //{
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                    //await _signInManager.SignInAsync(user, isPersistent: false);
+                    //    return LocalRedirect(returnUrl);
                     //}
                 }
                 foreach (var error in result.Errors)

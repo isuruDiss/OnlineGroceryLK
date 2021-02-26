@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnlineGroceryLK.Data;
+using OnlineGroceryLK.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ using System.Threading.Tasks;
 namespace OnlineGroceryLK.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Admin)]
     public class UserController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -24,6 +27,48 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
             return View(await _db.ApplicationUser.Where(u => u.Id != claim.Value).ToListAsync());
+        }
+
+        public async Task<IActionResult> Lock(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var applicationUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            applicationUser.LockoutEnd = DateTime.Now.AddYears(1000);
+
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> UnLock(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var applicationUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (applicationUser == null)
+            {
+                return NotFound();
+            }
+
+            applicationUser.LockoutEnd = DateTime.Now;
+
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

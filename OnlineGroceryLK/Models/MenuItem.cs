@@ -31,7 +31,7 @@ namespace OnlineGroceryLK.Models
 
         //public virtual SubCategory SubCategory { get; set; }
 
-        [Range(1, int.MaxValue, ErrorMessage = " Price should be greater than Rs.1")]
+        [ Range(1, int.MaxValue, ErrorMessage = " Price should be greater than Rs.1")]
         public decimal Price { get; set; }
 
 

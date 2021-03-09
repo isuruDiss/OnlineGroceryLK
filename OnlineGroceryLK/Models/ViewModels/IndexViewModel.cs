@@ -9,7 +9,7 @@ namespace OnlineGroceryLK.Models.ViewModels
     {
         public IEnumerable<MenuItem> MenuItem { get; set; }
         public IEnumerable<Category> Category { get; set; }
-      
+
 
     }
 }

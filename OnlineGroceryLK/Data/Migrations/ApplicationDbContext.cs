@@ -15,9 +15,11 @@ namespace OnlineGroceryLK.Data
         } 
 
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
-        public DbSet<MenuItem> MenuItem { get; set; }
+       // public DbSet<MenuItem> MenuItem { get; set; }
         public DbSet<Category> Category { get; set; }
-        public DbSet<SubCategory> SubCategory { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<StockMaster> StockMaster { get; set; }
+
         //public object MenuItem { get; internal set; }
     }
 }

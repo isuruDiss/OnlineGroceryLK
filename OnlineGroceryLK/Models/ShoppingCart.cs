@@ -25,11 +25,11 @@ namespace OnlineGroceryLK.Models
         [ForeignKey("ApplicationUserId")]
         public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public int MenuItemId { get; set; }
+        public int StockMasterId { get; set; }
 
         [NotMapped]
-        [ForeignKey("MenuItemId")]
-       // public virtual MenuItem MenuItem { get; set; }
+        [ForeignKey("StockMasterId")]
+        public virtual StockMaster StockMaster { get; set; }
 
 
 

@@ -228,6 +228,15 @@ namespace OnlineGroceryLK.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Category_Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Category_Decription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Category_Type")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -237,55 +246,28 @@ namespace OnlineGroceryLK.Data.Migrations
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("OnlineGroceryLK.Models.MenuItem", b =>
+            modelBuilder.Entity("OnlineGroceryLK.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Brand")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("MenuItem");
-                });
-
-            modelBuilder.Entity("OnlineGroceryLK.Models.ShoppingCart", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("ApplicationUserId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Count")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MenuItemId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ShoppingCart");
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("OnlineGroceryLK.Models.ApplicationUser", b =>
@@ -361,7 +343,7 @@ namespace OnlineGroceryLK.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OnlineGroceryLK.Models.MenuItem", b =>
+            modelBuilder.Entity("OnlineGroceryLK.Models.Product", b =>
                 {
                     b.HasOne("OnlineGroceryLK.Models.Category", "Category")
                         .WithMany()

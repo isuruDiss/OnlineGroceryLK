@@ -14,5 +14,10 @@ namespace OnlineGroceryLK.Models
         [Display(Name="Category Name")]
         [Required]
         public string Name { get; set; }
+        public string Category_Type { get; set; }
+        public string Category_Code { get; set; }
+        public string Category_Decription { get; set; }
+      
+
     }
 }

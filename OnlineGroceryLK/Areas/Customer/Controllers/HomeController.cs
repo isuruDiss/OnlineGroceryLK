@@ -33,7 +33,7 @@ namespace OnlineGroceryLK.Controllers
         {
             IndexViewModel IndexVM = new IndexViewModel()
             {
-                MenuItem = await _db.MenuItem.ToListAsync(),
+             //   MenuItem = await _db.MenuItem.ToListAsync(),
                 Category = await _db.Category.ToListAsync(),
 
             };
@@ -114,6 +114,10 @@ namespace OnlineGroceryLK.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult Products()
         {
             return View();
         }

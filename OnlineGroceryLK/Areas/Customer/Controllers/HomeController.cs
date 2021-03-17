@@ -33,20 +33,20 @@ namespace OnlineGroceryLK.Controllers
         {
             IndexViewModel IndexVM = new IndexViewModel()
             {
-             //   MenuItem = await _db.MenuItem.ToListAsync(),
+                StockMaster = await _db.StockMaster.Include(m => m.Category).Include(m => m.Product).ToListAsync(),
                 Category = await _db.Category.ToListAsync(),
+               // Coupon = await _db.Coupon.Where(c => c.IsActive == true).ToListAsync()
 
             };
 
-            var claimsIdentity = (ClaimsIdentity)User.Identity;
-            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            //var claimsIdentity = (ClaimsIdentity)User.Identity;
+            //var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
-            if (claim != null)
-            {
-               // var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId == claim.Value).ToList().Count;
-               // HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
-            }
-
+            //if (claim != null)
+            //{
+            //    var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId == claim.Value).ToList().Count;
+            //    HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
+            //}
 
 
             return View(IndexVM);

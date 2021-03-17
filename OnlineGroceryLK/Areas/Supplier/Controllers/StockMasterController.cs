@@ -108,5 +108,82 @@ namespace OnlineGroceryLK.Areas.Supplier.Controllers
         }
 
 
+
+        //GET - EDIT
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            StockItemsVM.StockMaster = await _db.StockMaster.Include(m => m.Category).Include(m => m.Product).SingleOrDefaultAsync(m => m.Id == id);
+            StockItemsVM.Product = await _db.Product.Where(s => s.CategoryId == StockItemsVM.StockMaster.CategoryId).ToListAsync();
+
+            if (StockItemsVM.StockMaster == null)
+            {
+                return NotFound();
+            }
+            return View(StockItemsVM);
+        }
+
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditPOST(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            StockItemsVM.StockMaster.ProductId = Convert.ToInt32(Request.Form["SubCategoryId"].ToString());
+
+            if (!ModelState.IsValid)
+            {
+                StockItemsVM.Product = await _db.Product.Where(s => s.CategoryId == StockItemsVM.StockMaster.CategoryId).ToListAsync();
+                return View(StockItemsVM);
+            }
+
+            //Work on the image saving section
+
+            string webRootPath = _hostingEnvironment.WebRootPath;
+            var files = HttpContext.Request.Form.Files;
+
+            var menuItemFromDb = await _db.StockMaster.FindAsync(StockItemsVM.StockMaster.Id);
+
+            if (files.Count > 0)
+            {
+                //New Image has been uploaded
+                var uploads = Path.Combine(webRootPath, "images/ItemImg");
+                var extension_new = Path.GetExtension(files[0].FileName);
+
+                //Delete the original file
+                var imagePath = Path.Combine(webRootPath, menuItemFromDb.Image.TrimStart('\\'));
+
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+
+                //we will upload the new file
+                using (var filesStream = new FileStream(Path.Combine(uploads, StockItemsVM.StockMaster.Id + extension_new), FileMode.Create))
+                {
+                    files[0].CopyTo(filesStream);
+                }
+                menuItemFromDb.Image = @"\images\ItemImg\" + StockItemsVM.StockMaster.Id + extension_new;
+            }
+
+            menuItemFromDb.Qty = StockItemsVM.StockMaster.Qty;
+            menuItemFromDb.Price = StockItemsVM.StockMaster.Price;
+            menuItemFromDb.Status = StockItemsVM.StockMaster.Status;
+            menuItemFromDb.CategoryId = StockItemsVM.StockMaster.CategoryId;
+            menuItemFromDb.ProductId = StockItemsVM.StockMaster.ProductId;
+
+            await _db.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
     }
 }

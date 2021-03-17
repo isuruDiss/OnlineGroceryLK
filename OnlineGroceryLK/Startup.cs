@@ -28,14 +28,14 @@ namespace OnlineGroceryLK
         public IConfiguration Configuration { get; }
 
 
-// This method gets called by the runtime. Use this method to add services to the container.
-public void ConfigureServices(IServiceCollection services)
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<IdentityUser, IdentityRole>()
-                //.AddDefaultUI(UIFramework.Boostrap4)
+                          //.AddDefaultUI(UIFramework.Boostrap4)
                           .AddDefaultTokenProviders()
                           .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);

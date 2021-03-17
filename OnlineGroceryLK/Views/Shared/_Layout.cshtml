@@ -43,9 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link text" asp-area="Admin" asp-controller="Category" asp-action="Index">Cart </a>
-                        </li>
+                        </li>*@
 
                         @if (HttpContextAccessor.HttpContext.Session.GetInt32(@SD.ssShoppingCartCount) != null)
                         {

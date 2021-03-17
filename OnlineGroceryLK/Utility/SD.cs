@@ -31,7 +31,7 @@ namespace OnlineGroceryLK.Utility
 
 
 
-
+        //public const string ssShoppingCartCount = "ssCartCount";
 
 
 

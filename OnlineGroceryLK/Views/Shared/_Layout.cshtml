@@ -42,7 +42,7 @@
                             <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text" asp-area="Admin" asp-controller="Category" asp-action="Index" >Cart </a>
+                            <a class="nav-link text" asp-area="Admin" asp-controller="Category" asp-action="Index">Cart </a>
                         </li>
                         @if (User.IsInRole(SD.Admin))
                         {
@@ -52,9 +52,23 @@
                                     Admin Utilities
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
-                                    <a class="dropdown-item" asp-action="Index" asp-controller="Category" asp-area="Admin" >Manage Category</a>
-                                    <a class="dropdown-item" asp-action="Index" asp-controller="Product" asp-area="Admin" >Manage Products</a>
-                                    <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin" >Users</a>
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="Category" asp-area="Admin">Manage Category</a>
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="Product" asp-area="Admin">Manage Products</a>
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Users</a>
+                                </div>
+                            </li>
+                        }
+                        @if (User.IsInRole(SD.Supplier))
+                        {
+
+                            <li class="nav-item dropdown text-white-50">
+                                <a class="nav-link dropdown-toggle" dropdown-toggle" href="#" id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Supplier Utilities
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropDownMenuLink">
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="StockMaster" asp-area="Supplier">Manage Stocks</a>
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="Product" asp-area="Admin">Orders</a>
+                                    <a class="dropdown-item" asp-action="Index" asp-controller="User" asp-area="Admin">Dashboard</a>
                                 </div>
                             </li>
                         }

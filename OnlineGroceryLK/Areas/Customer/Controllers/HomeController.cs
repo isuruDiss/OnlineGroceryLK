@@ -43,8 +43,8 @@ namespace OnlineGroceryLK.Controllers
 
             if (claim != null)
             {
-                var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId == claim.Value).ToList().Count;
-                HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
+               // var cnt = _db.ShoppingCart.Where(u => u.ApplicationUserId == claim.Value).ToList().Count;
+               // HttpContext.Session.SetInt32(SD.ssShoppingCartCount, cnt);
             }
 
 
@@ -52,66 +52,66 @@ namespace OnlineGroceryLK.Controllers
             return View(IndexVM);
         }
 
-        [Authorize]
-        public async Task<IActionResult> Details(int id)
-        {
-            var menuItemFromDb = await _db.MenuItem.Include(m => m.Category).Where(m => m.Id == id).FirstOrDefaultAsync();
+        //[Authorize]
+        //public async Task<IActionResult> Details(int id)
+        //{
+        //    var menuItemFromDb = await _db.MenuItem.Include(m => m.Category).Where(m => m.Id == id).FirstOrDefaultAsync();
 
-            ShoppingCart cartObj = new ShoppingCart()
-            {
-                MenuItem = menuItemFromDb,
-                MenuItemId = menuItemFromDb.Id
-            };
+        //    ShoppingCart cartObj = new ShoppingCart()
+        //    {
+        //        MenuItem = menuItemFromDb,
+        //        MenuItemId = menuItemFromDb.Id
+        //    };
 
-            return View(cartObj);
-        }
+        //    return View(cartObj);
+        //}
 
 
 
-        [Authorize]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Details(ShoppingCart CartObject)
-        {
-            CartObject.Id = 0;
-            if (ModelState.IsValid)
-            {
-                var claimsIdentity = (ClaimsIdentity)this.User.Identity;
-                var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
-                CartObject.ApplicationUserId = claim.Value;
+        //[Authorize]
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Details(ShoppingCart CartObject)
+        //{
+        //    CartObject.Id = 0;
+        //    if (ModelState.IsValid)
+        //    {
+        //        var claimsIdentity = (ClaimsIdentity)this.User.Identity;
+        //        var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+        //        CartObject.ApplicationUserId = claim.Value;
 
-                ShoppingCart cartFromDb = await _db.ShoppingCart.Where(c => c.ApplicationUserId == CartObject.ApplicationUserId
-                                                && c.MenuItemId == CartObject.MenuItemId).FirstOrDefaultAsync();
+        //        ShoppingCart cartFromDb = await _db.ShoppingCart.Where(c => c.ApplicationUserId == CartObject.ApplicationUserId
+        //                                        && c.MenuItemId == CartObject.MenuItemId).FirstOrDefaultAsync();
 
-                if (cartFromDb == null)
-                {
-                    await _db.ShoppingCart.AddAsync(CartObject);
-                }
-                else
-                {
-                    cartFromDb.Qty = cartFromDb.Qty + CartObject.Qty;
-                }
-                await _db.SaveChangesAsync();
+        //        if (cartFromDb == null)
+        //        {
+        //            await _db.ShoppingCart.AddAsync(CartObject);
+        //        }
+        //        else
+        //        {
+        //            cartFromDb.Qty = cartFromDb.Qty + CartObject.Qty;
+        //        }
+        //        await _db.SaveChangesAsync();
 
-                var count = _db.ShoppingCart.Where(c => c.ApplicationUserId == CartObject.ApplicationUserId).ToList().Count();
-                HttpContext.Session.SetInt32(SD.ssShoppingCartCount, count);
+        //        var count = _db.ShoppingCart.Where(c => c.ApplicationUserId == CartObject.ApplicationUserId).ToList().Count();
+        //        HttpContext.Session.SetInt32(SD.ssShoppingCartCount, count);
 
-                return RedirectToAction("Index");
-            }
-            else
-            {
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
 
-                var menuItemFromDb = await _db.MenuItem.Include(m => m.Category).Where(m => m.Id == CartObject.MenuItemId).FirstOrDefaultAsync();
+        //        var menuItemFromDb = await _db.MenuItem.Include(m => m.Category).Where(m => m.Id == CartObject.MenuItemId).FirstOrDefaultAsync();
 
-                ShoppingCart cartObj = new ShoppingCart()
-                {
-                    MenuItem = menuItemFromDb,
-                    MenuItemId = menuItemFromDb.Id
-                };
+        //        ShoppingCart cartObj = new ShoppingCart()
+        //        {
+        //            MenuItem = menuItemFromDb,
+        //            MenuItemId = menuItemFromDb.Id
+        //        };
 
-                return View(cartObj);
-            }
-        }
+        //        return View(cartObj);
+        //    }
+        //}
 
         public IActionResult Privacy()
         {

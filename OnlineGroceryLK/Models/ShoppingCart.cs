@@ -29,7 +29,7 @@ namespace OnlineGroceryLK.Models
 
         [NotMapped]
         [ForeignKey("MenuItemId")]
-        public virtual MenuItem MenuItem { get; set; }
+       // public virtual MenuItem MenuItem { get; set; }
 
 
 

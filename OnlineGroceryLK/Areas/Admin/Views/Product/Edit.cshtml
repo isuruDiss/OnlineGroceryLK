@@ -1,0 +1,105 @@
+﻿@model OnlineGroceryLK.Models.ViewModels.ProductAndCatagoryViewModel
+@using OnlineGroceryLK.Extentions
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<h2 class="text-info">Edit Product</h2>
+<br />
+
+<partial name="_StatusMessage" model="Model.StatusMessage" />
+
+<div class="border backgroundWhite row">
+    <div class="col-8 border-right">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Product.CategoryId" />
+            <input type="hidden" asp-for="Product.Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Product.Name" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Product.Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="col-form-label">Category Type</label>
+                </div>
+                <div class="col-5">
+                    <select id="ddlProductlist" asp-for="Product.CategoryId" asp-items="Model.CategoryList.ToSelectListItem(Model.Product.CategoryId)" class="form-control"></select>
+                </div>
+                <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="col-form-label">Product Brand</label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Product.Brand" class="form-control" />
+                </div>
+                <span asp-validation-for="Product.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-5 offset-3">
+                    <partial name="_EditAndBackToListButton" model="Model.Product.Id" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-3 offset-1">
+        @if (Model.ProductList.Count() > 0)
+        {
+            <p> Existing Subcategories: </p>
+
+            <div id="ProductList">
+                <ul class="list-group"></ul>
+            </div>
+        }
+    </div>
+
+
+
+</div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+
+        function updateSubCategoryList() {
+            var categorySelected = document.getElementById("ddlProductlist").value;
+
+            $list = $('#ProductList');
+
+            $.ajax({
+                url: '/Admin/Product/GetProduct/' + categorySelected,
+                type: 'GET',
+                dataType: 'text',
+                success: function (data) {
+                    results = JSON.parse(data);
+                    $list.html('');
+                    $list.append(' <ul class="list-group"> ');
+                    for (i in results) {
+                        $list.append('<li class="list-group-item">' + results[i].text + '</li>');
+                    }
+                    $list.append('</ul>');
+                }
+
+            });
+
+        }
+
+        $(document).ready(function () {
+            updateSubCategoryList();
+        });
+
+    </script>
+
+
+}

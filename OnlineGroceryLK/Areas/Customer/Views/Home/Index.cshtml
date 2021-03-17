@@ -7,7 +7,7 @@
 <br />
 <br />
 
-@*<div class="backgroundWhite container">
+<div class="backgroundWhite container">
 
     <ul id="menu-filters" class="menu-filter-list list-inline text-center">
         <li class="active btn btn-secondary ml-1 mr-1" data-filter=".menu-restaurant">Show All</li>
@@ -22,10 +22,10 @@
     @foreach (var category in Model.Category)
     {
 <div class="row" id="menu-wrapper">
-    <partial name="_ThumbnailAreaPartial" model="@Model.MenuItem.Where(u=>u.Category.Name.Equals(category.Name))" />
+    <partial name="_ThumbnailAreaPartial" model="@Model.StockMaster.Where(u=>u.Category.Name.Equals(category.Name))" />
 </div>
     }
-</div>*@
+</div>
 
 
 @section Scripts{

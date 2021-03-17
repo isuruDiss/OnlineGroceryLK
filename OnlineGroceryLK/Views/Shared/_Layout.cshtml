@@ -1,5 +1,7 @@
 ﻿@using OnlineGroceryLK.Utility
 @using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +46,26 @@
                         <li class="nav-item">
                             <a class="nav-link text" asp-area="Admin" asp-controller="Category" asp-action="Index">Cart </a>
                         </li>
+
+                        @if (HttpContextAccessor.HttpContext.Session.GetInt32(@SD.ssShoppingCartCount) != null)
+                        {
+                            <li style="color:white">
+                                <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="nav-link">
+                                    @{ var count = HttpContextAccessor.HttpContext.Session.GetInt32(@SD.ssShoppingCartCount); }
+                                    <i class="fas fa-shopping-cart"></i> &nbsp; (@count)
+                                </a>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li style="color:white">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-shopping-cart"></i> &nbsp; (0)
+                                </a>
+                            </li>
+                        }
+
                         @if (User.IsInRole(SD.Admin))
                         {
 

@@ -19,7 +19,7 @@ namespace OnlineGroceryLK.Data
         public DbSet<StockMaster> StockMaster { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
-        public IEnumerable<object> ShoppingCart { get; internal set; }
+        public DbSet<ShoppingCart> ShoppingCart { get; set; }
 
         //public object MenuItem { get; internal set; }
     }

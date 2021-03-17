@@ -470,4 +470,3 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Onl
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csproj.CopyComplete
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.genruntimeconfig.cache
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
-D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csprojAssemblyReference.cache

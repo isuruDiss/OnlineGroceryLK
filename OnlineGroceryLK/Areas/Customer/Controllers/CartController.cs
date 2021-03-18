@@ -151,7 +151,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
                     StockMasterId = item.StockMasterId,
                     OrderId = detailCart.OrderHeader.Id,
                     Description = item.StockMaster.Description,
-                    Name = item.StockMaster.Product.Name,
+                    Name = item.StockMaster.ProductId.ToString(),
                     Price = item.StockMaster.Price,
                     Count = item.Qty
                 };

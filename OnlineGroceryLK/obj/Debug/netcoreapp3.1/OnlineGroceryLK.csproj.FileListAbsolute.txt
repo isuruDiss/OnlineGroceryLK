@@ -1360,3 +1360,4 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Onl
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.genruntimeconfig.cache
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Summary.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\bin\Debug\netcoreapp3.1\Stripe.net.dll
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csprojAssemblyReference.cache

@@ -10,7 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnlineGroceryLK.Data;
+using OnlineGroceryLK.Utility;
 using Spice.Service;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +40,9 @@ namespace OnlineGroceryLK
                           //.AddDefaultUI(UIFramework.Boostrap4)
                           .AddDefaultTokenProviders()
                           .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddControllersWithViews();
@@ -69,7 +74,7 @@ namespace OnlineGroceryLK
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseSession();

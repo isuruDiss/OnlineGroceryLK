@@ -38,7 +38,7 @@ namespace OnlineGroceryLK.Models
         [Required]
         public int Qty { get; set; }
 
-        [Required]
+        //[Required]
         public string Status { get; set; }
         public enum Sstatus { NA = 0, Available = 1, Unavailable = 2 }
     }

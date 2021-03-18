@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Tmart-Minimalist eCommerce HTML5 Template</title>
+    <title>OnlineGroceryLK</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -117,6 +117,25 @@
                                         </li>
 
                                     }
+                                    @if (HttpContextAccessor.HttpContext.Session.GetInt32(@SD.ssShoppingCartCount) != null)
+                                    {
+                                        <li style="color:white">
+                                            <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="nav-link">
+                                                @{ var count = HttpContextAccessor.HttpContext.Session.GetInt32(@SD.ssShoppingCartCount); }
+                                                <i class="fas fa-shopping-cart"></i> &nbsp; (@count)
+                                            </a>
+                                        </li>
+
+                                    }
+                                    else
+                                    {
+                                        <li style="color:white">
+                                            <a href="#" class="nav-link">
+                                                <i class="fas fa-shopping-cart"></i> &nbsp; (0)
+                                            </a>
+                                        </li>
+                                    }
+
 
                                 </ul>
                             </nav>

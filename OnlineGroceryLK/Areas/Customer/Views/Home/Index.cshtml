@@ -174,15 +174,15 @@
     </div>
 </div>
 
-<section class="htc__product__area bg__white">
+<!--<section class="htc__product__area bg__white">
     <div class="container">
         <div class="row">
 
             <div class="col-md-12">
                 <div class="product-style-tab">
-                    <div class="product-tab-list">
+                    <div class="product-tab-list">-->
                         <!-- Nav tabs -->
-                        <ul class="tab-style" role="tablist">
+                        <!--<ul class="tab-style" role="tablist">
                             <li>
                                 <a href="#home1" data-toggle="tab">
                                     <div class="tab-menu-text">
@@ -1333,58 +1333,69 @@
 
 
 
-</section>
+</section>-->
 
 
-@*<div class="backgroundWhite ">
+<section class="htc__product__area bg__white">
+    <div class="container">
+        <div class="row">
 
-        <ul id="menu-filters" class="menu-filter-list list-inline text-center">
-            <li class="active btn btn-secondary ml-1 mr-1" data-filter=".menu-restaurant">Show All</li>
+            <ul id="menu-filters" class="menu-filter-list list-inline text-center">
+                <li class="active btn btn-secondary ml-1 mr-1" data-filter=".menu-restaurant">Show All</li>
 
-            @foreach (var item in Model.Category)
+                @foreach (var item in Model.Category)
+                {
+                    <li class="ml-1 mr-1" data-filter=".@item.Name.Replace(" ",string.Empty)">@item.Name</li>
+                }
+            </ul>
+
+
+            @foreach (var category in Model.Category)
             {
-                <li class="ml-1 mr-1" data-filter=".@item.Name.Replace(" ",string.Empty)">@item.Name</li>
+                <div class="row" id="menu-wrapper">
+                    <partial name="_ThumbnailAreaPartial" model="@Model.StockMaster.Where(u=>u.Category.Name.Equals(category.Name))" />
+                </div>
             }
-        </ul>
+        </div>
+        </div>
+    </section>
 
 
-        @foreach (var category in Model.Category)
-        {
-            <div class="row" id="menu-wrapper">
-                <partial name="_ThumbnailAreaPartial" model="@Model.StockMaster.Where(u=>u.Category.Name.Equals(category.Name))" />
+
+            <div class="backgroundWhite ">
+
+             
+
             </div>
-        }
-
-    </div>*@
 
 
-@section Scripts{
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+            @section Scripts{
+                <script src="https://code.jquery.com/jquery-3.3.1.js"
+                        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                        crossorigin="anonymous"></script>
 
-    <script>
+                <script>
 
-        var posts = $('.post');
+                    var posts = $('.post');
 
-        (function ($) {
+                    (function ($) {
 
-            $("#menu-filters li").click(function () {
-                $("#menu-filters li").removeClass('active btn btn-secondary');
-                $(this).addClass('active btn btn-secondary');
+                        $("#menu-filters li").click(function () {
+                            $("#menu-filters li").removeClass('active btn btn-secondary');
+                            $(this).addClass('active btn btn-secondary');
 
-                var selectedFilter = $(this).data("filter");
+                            var selectedFilter = $(this).data("filter");
 
-                $(".menu-restaurant").fadeOut();
+                            $(".menu-restaurant").fadeOut();
 
-                setTimeout(function () {
-                    $(selectedFilter).slideDown();
-                }, 300);
-            });
+                            setTimeout(function () {
+                                $(selectedFilter).slideDown();
+                            }, 300);
+                        });
 
 
 
-        })(jQuery);
+                    })(jQuery);
 
-    </script>
-}
+                </script>
+            }

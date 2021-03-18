@@ -61,7 +61,11 @@ namespace OnlineGroceryLK.Controllers
             ShoppingCart cartObj = new ShoppingCart()
             {
                 StockMaster = menuItemFromDb,
-                StockMasterId = menuItemFromDb.Id
+                StockMasterId = menuItemFromDb.Id,
+                //Product = menuItemFromDb.Product,
+                //ProductId = menuItemFromDb.ProductId
+                
+
             };
 
             return View(cartObj);
@@ -102,7 +106,7 @@ namespace OnlineGroceryLK.Controllers
             else
             {
 
-                var menuItemFromDb = await _db.StockMaster.Include(m => m.Category).Where(m => m.Id == CartObject.StockMasterId).FirstOrDefaultAsync();
+                var menuItemFromDb = await _db.StockMaster.Include(m => m.Category).Include(m => m.Product).Where(m => m.Id == CartObject.StockMasterId).FirstOrDefaultAsync();
 
                 ShoppingCart cartObj = new ShoppingCart()
                 {

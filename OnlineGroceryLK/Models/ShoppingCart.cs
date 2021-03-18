@@ -30,8 +30,10 @@ namespace OnlineGroceryLK.Models
         [NotMapped]
         [ForeignKey("StockMasterId")]
         public virtual StockMaster StockMaster { get; set; }
-
-
+        //public int ProductId { get; set; }
+        //[NotMapped]
+        //[ForeignKey("ProductId")]
+        //public virtual Product Product { get; set; }
 
         [Range(1,int.MaxValue, ErrorMessage ="Please enter a value greater than or equal to {1}")]
         public int Qty { get; set; }

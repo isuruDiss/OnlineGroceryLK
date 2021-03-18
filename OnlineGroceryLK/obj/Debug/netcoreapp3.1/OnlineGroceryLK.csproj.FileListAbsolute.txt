@@ -1308,6 +1308,7 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Raz
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Index.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Privacy.cshtml.g.cs
@@ -1353,6 +1354,7 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Raz
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Create.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Edit.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Index.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\_ViewImports.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\_ViewStart.cshtml.g.cs
@@ -1367,6 +1369,7 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Raz
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_StatusMessage.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtonPartial.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ThumbnailAreaPartial.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -1377,4 +1380,6 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Onl
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.dll
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.pdb
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.genruntimeconfig.cache
-D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ThumbnailAreaPartial.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Summary.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\bin\Debug\netcoreapp3.1\Stripe.net.dll
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csprojAssemblyReference.cache

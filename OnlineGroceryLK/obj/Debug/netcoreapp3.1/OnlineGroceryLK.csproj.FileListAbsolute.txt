@@ -786,6 +786,7 @@ E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\bin\Debug\n
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csprojAssemblyReference.cache
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.AssemblyInfoInputs.cache
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.AssemblyInfo.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csproj.CoreCompileInputs.cache
@@ -799,10 +800,22 @@ E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\n
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.TagHelpers.input.cache
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.TagHelpers.output.cache
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.RazorCoreGenerate.cache
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Create.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Delete.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Details.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Edit.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Delete.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Edit.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Index.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Privacy.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Products.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewImports.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\_ViewStart.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
@@ -840,13 +853,23 @@ E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\n
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
-E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Index.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\_ViewImports.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\_ViewStart.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Login_new.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateButtonPartial.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DeleteAndBackToListButton.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_DetailsAndBackToListButton.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_StatusMessage.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_TableButtonPartial.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -857,10 +880,9 @@ E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\n
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.dll
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.pdb
 E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.genruntimeconfig.cache
-E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csprojAssemblyReference.cache
-E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
-E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Login_new.cshtml.g.cs
-E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Products.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Create.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Edit.cshtml.g.cs
+E:\Personal\SLIIT\MSc IT\SEP\Project\OnlineGrocerylk\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ThumbnailAreaPartial.cshtml.g.cs
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\bin\Debug\netcoreapp3.1\appsettings.json
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\bin\Debug\netcoreapp3.1\OnlineGroceryLK.StaticWebAssets.xml

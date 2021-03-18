@@ -1,29 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MSC\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\OnlineGroceryLK.csproj": {}
+    "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj": {}
   },
   "projects": {
-    "D:\\MSC\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\OnlineGroceryLK.csproj": {
+    "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MSC\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
+        "projectUniqueName": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
         "projectName": "OnlineGroceryLK",
-        "projectPath": "D:\\MSC\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
-        "packagesPath": "C:\\Users\\dkottawagamage\\.nuget\\packages\\",
-        "outputPath": "D:\\MSC\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\obj\\",
+        "projectPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
+        "packagesPath": "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\",
+        "outputPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\dkottawagamage\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Users\\Isuru Dissanayaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -31,10 +25,6 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -103,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

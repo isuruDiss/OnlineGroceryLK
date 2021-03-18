@@ -7,63 +7,72 @@
 }
 
 
-<br />
-<h2 class="text-info">Create Category</h2>
-<br />
-<partial name="_StatusMessage" model="Model.StatusMessage" />
 
-<div class="border backgroundWhite row">
-    <div class="col-8 border-right">
-        <form method="post" asp-action="Create">
-            <div class="border backgroundWhite">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group row">
-                    <div class="col-2">
-                        <label asp-for="Product.Name" class="col-form-label"></label>
-                    </div>
-                    <div class="col-5">
-                        <input asp-for="Product.Name" class="form-control" />
-                    </div>
-                    <span asp-validation-for="Product.Name" class="text-danger"></span>
-                </div>
-                <div class="form-group row">
-                    <div class="col-2">
-                        <label class="col-form-label">Category Type</label>
-                    </div>
-                    <div class="col-5">
-                        <select id="ddlProductlist" asp-for="Product.CategoryId" asp-items="Model.CategoryList.ToSelectListItem(Model.Product.CategoryId)" class="form-control"></select>
-                    </div>
-                    <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
-                </div>
-                <div class="form-group row">
-                    <div class="col-2">
-                        <label class="col-form-label">Product Brand</label>
-                    </div>
-                    <div class="col-5">
-                        <input asp-for="Product.Brand" class="form-control" />
-                    </div>
-                    <span asp-validation-for="Product.Brand" class="text-danger"></span>
-                </div>
+<section class="categories-slider-area bg__white">
+    <h2 class="text-info"></h2>
+    <br />
+    <br />
+    <partial name="_StatusMessage" model="Model.StatusMessage" />
 
-                <div class="form-group row">
-                    <div class="col-5 offset-2">
-                        <partial name="_CreateAndBackToListButton" />
+    <div class="container" style="padding-bottom:10%;">
+        <h2 class="text-info" style="padding-bottom:5%">Create Category</h2>
+
+        <div class="col-7 border-right">
+            <form method="post" asp-action="Create">
+                <div class="border backgroundWhite">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group row">
+                        <div class="col-2">
+                            <label asp-for="Product.Name" class="col-form-label"></label>
+                        </div>
+                        <div class="col-5">
+                            <input asp-for="Product.Name" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Product.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-2">
+                            <label class="col-form-label">Category Type</label>
+                        </div>
+                        <div class="col-5">
+                            <select id="ddlProductlist" asp-for="Product.CategoryId" asp-items="Model.CategoryList.ToSelectListItem(Model.Product.CategoryId)" class="form-control"></select>
+                        </div>
+                        <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-2">
+                            <label class="col-form-label">Product Brand</label>
+                        </div>
+                        <div class="col-5">
+                            <input asp-for="Product.Brand" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Product.Brand" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group row" style="padding-left:40%">
+                        <div class="col-7 offset-2">
+                            <partial name="_CreateAndBackToListButton" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="col-3 offset-1">
+            @if (Model.ProductList.Count() > 0)
+            {
+                <p> Existing Product: </p>
+
+                <div id="ProductList">
+                    <ul class="list-group"></ul>
+                </div>
+            }
+        </div>
     </div>
-    <div class="col-3 offset-1">
-        @if (Model.ProductList.Count() > 0)
-        {
-            <p> Existing Product: </p>
 
-            <div id="ProductList">
-                <ul class="list-group"></ul>
-            </div>
-        }
-    </div>
-</div>
+</section>
+
+
+
 
     
 

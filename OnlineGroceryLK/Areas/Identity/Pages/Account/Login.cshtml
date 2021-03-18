@@ -5,7 +5,105 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
+<section class="categories-slider-area bg__white">
+    <div class="container">
+ 
+        <div class="htc__login__register bg__white ptb--130" style=" background-color:antiquewhite">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <ul class="login__register__menu" role="tablist">
+                            <li role="presentation" class="login active"><a href="#login" role="tab" data-toggle="tab" aria-expanded="true">Login</a></li>
+                            <li role="presentation" class="register">
+                                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Start Login Register Content -->
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="htc__login__register__wrap">
+                            <!-- Start Single Content -->
+                            <div id="login" role="tabpanel" class="single__tabs__panel tab-pane fade active in">
+                                <form class="login" id="account" method="post">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="Input.Email"></label>
+                                        <input asp-for="Input.Email" class="form-control" />
+                                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Input.Password"></label>
+                                        <input asp-for="Input.Password" class="form-control" />
+                                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="tabs__checkbox">
+                                        <label asp-for="Input.RememberMe">
+                                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                        </label>
+                                        <span class="forget">
+                                            <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                                        </span>
+                                    </div>
+
+                                    <div class="htc__login__btn mt--30">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+
+                                    </div>
+
+                                </form>
+                                <div class="htc__social__connect">
+                                    <h2>Or Login With</h2>
+                                    <ul class="htc__soaial__list">
+                                        <li><a class="bg--twitter" href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+
+                                        <li><a class="bg--instagram" href="#"><i class="zmdi zmdi-instagram"></i></a></li>
+
+                                        <li><a class="bg--facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+
+                                        <li><a class="bg--googleplus" href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Single Content -->
+                            <!-- Start Single Content -->
+                            <div id="register" role="tabpanel" class="single__tabs__panel tab-pane fade">
+                                <form method="post">
+                                    <input type="text" placeholder="Name*">
+                                    <input type="email" placeholder="Email*">
+                                    <input type="password" placeholder="Password*">
+                                </form>
+
+                                <div class="tabs__checkbox">
+                                    <label asp-for="Input.RememberMe">
+                                        <input asp-for="Input.RememberMe" />
+                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                    </label>
+                                </div>
+
+                                <div class="htc__login__btn">
+                                    <a href="#">register</a>
+                                </div>
+                                <div class="htc__social__connect">
+                                    <h2>Or Login With</h2>
+                                </div>
+                            </div>
+                            <!-- End Single Content -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Login Register Content -->
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+@*<h1>@ViewData["Title"]</h1>
 <div class="align-content-sm-center">
     <div class="col-md-5">
         <section>
@@ -44,10 +142,40 @@
             </form>
         </section>
     </div>
-</div>
+</div>*@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="~/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="~/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="~/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="~/css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="~/css/custom.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="~/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="~/js/plugins.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="~/js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="~/js/main.js"></script>
 
 }

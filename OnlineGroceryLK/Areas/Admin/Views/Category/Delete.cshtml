@@ -5,23 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br />
-<h2 class="text-info">Delete Category</h2>
 <br />
+<section class="categories-slider-area bg__white">
 
-<form method="post" asp-action="Delete">
-    <div class="border backgroundWhite">
-        <div class="form-group row">
-            <div class="col-2">
-                <label asp-for="Name" class="col-form-label"></label>
+    <div class="container" style="padding-bottom:20%; padding-top:5%">
+        <h2 class="text-info" style="padding-bottom:5%">Delete Category</h2>
+
+        <form method="post" asp-action="Delete">
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Name" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Name" readonly class="form-control" />
+                </div>
             </div>
-            <div class="col-5">
-                <input asp-for="Name" readonly class="form-control" />
+            <div class="form-group row" style="padding-left:40%">
+                <div class="col-5 offset-2">
+                    <partial name="_DeleteAndBackToListButton" model="Model.Id" />
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-5 offset-2">
-                <partial name="_DeleteAndBackToListButton" model="Model.Id" />
-            </div>
-        </div>
+        </form>
     </div>
-</form>
+</section>

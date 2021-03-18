@@ -3,24 +3,26 @@
 @{
     ViewData["Title"] = "Details";
 }
+<section class="categories-slider-area bg__white">
 
-<br />
-<h2 class="text-info">Category Details</h2>
-<br />
-<div class=" border  backgroundWhite">
-    <div class="form-group row">
-        <div class="col-2">
-            <label asp-for="Name"></label>
+    <div class="container" style="padding-bottom:20%; padding-top:5%">
+        <h2 class="text-info" style="padding-bottom:5%">Category Details</h2>
+
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" disabled class="form-control" />
+            </div>
         </div>
-        <div class="col-5">
-            <input asp-for="Name" disabled class="form-control" />
+
+        <div class="form-group row" style="padding-left:40%">
+            <div class="col-5 offset-2">
+                <partial name="_DetailsAndBackToListButton" model="Model.Id" />
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="form-group row">
-        <div class="col-5 offset-2">
-            <partial name="_DetailsAndBackToListButton" model="Model.Id" />
-        </div>
-    </div>
 
-</div>

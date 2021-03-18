@@ -1356,3 +1356,5 @@ D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Onl
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.pdb
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.genruntimeconfig.cache
 D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ThumbnailAreaPartial.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\Razor\Areas\Supplier\Views\StockMaster\Edit.cshtml.g.cs
+D:\MSC\OnlineGrocery\OnlineGroceryLK\OnlineGroceryLK\obj\Debug\netcoreapp3.1\OnlineGroceryLK.csprojAssemblyReference.cache

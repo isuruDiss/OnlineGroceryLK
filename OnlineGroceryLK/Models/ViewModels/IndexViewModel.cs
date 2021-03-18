@@ -11,6 +11,6 @@ namespace OnlineGroceryLK.Models.ViewModels
         public IEnumerable<Category> Category { get; set; }
         public IEnumerable<Product> Product { get; set; }
 
-
+        
     }
 }

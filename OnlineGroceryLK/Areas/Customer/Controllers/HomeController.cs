@@ -55,7 +55,8 @@ namespace OnlineGroceryLK.Controllers
         [Authorize]
         public async Task<IActionResult> Details(int id)
         {
-            var menuItemFromDb = await _db.StockMaster.Include(m => m.Category).Where(m => m.Id == id).FirstOrDefaultAsync();
+            //var menuItemFromDb = await _db.StockMaster.Include(m => m.Category).Where(m => m.Id == id).FirstOrDefaultAsync();
+            var menuItemFromDb = await _db.StockMaster.Include(m => m.Category).Include(m => m.Product).Where(m => m.Id == id).FirstOrDefaultAsync();
 
             ShoppingCart cartObj = new ShoppingCart()
             {

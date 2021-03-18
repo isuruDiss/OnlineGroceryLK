@@ -11,6 +11,8 @@ using OnlineGroceryLK.Models;
 using OnlineGroceryLK.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineGroceryLK.Utility;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace OnlineGroceryLK.Areas.Supplier.Controllers
 {
@@ -19,6 +21,7 @@ namespace OnlineGroceryLK.Areas.Supplier.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _hostingEnvironment;
+        protected UserManager<ApplicationUser> UserManager { get; set; }
 
         [BindProperty]
         public StockViewModel StockItemsVM { get; set; }
@@ -65,7 +68,12 @@ namespace OnlineGroceryLK.Areas.Supplier.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreatePOST()
          {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            ApplicationUser applicationUser = await _db.ApplicationUser.Where(c => c.Id == claim.Value).FirstOrDefaultAsync();
+
             StockItemsVM.StockMaster.ProductId = Convert.ToInt32(Request.Form["ProductId"].ToString());
+            StockItemsVM.StockMaster.SupplierId = applicationUser.Id;
 
             if (!ModelState.IsValid)
             {

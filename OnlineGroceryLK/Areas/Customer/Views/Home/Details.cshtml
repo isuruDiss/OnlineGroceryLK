@@ -18,7 +18,7 @@
         <div class="col-md-8">
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label asp-for="StockMaster.Product.Name" class="text-info font-weight-bold"></label>
+                    <label asp-for="@Model.StockMaster.Product.Name" class="text-info font-weight-bold"></label>
                 </div>
                 <div class="col-md-8">
                     <input asp-for="StockMaster.Product.Name" readonly class="form-control" />
@@ -36,7 +36,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-md-4">
-                    <label asp-for="StockMaster.Price"  class="text-info font-weight-bold"></label>
+                    <label asp-for="StockMaster.Price" class="text-info font-weight-bold"></label>
                 </div>
                 <div class="col-md-8">
                     <input asp-for="StockMaster.Price" readonly class="form-control" />
@@ -51,6 +51,7 @@
                     <input asp-for="StockMaster.Category.Name" readonly class="form-control" />
                 </div>
             </div>
+            
             @*<div class="form-group row">
                     <div class="col-md-4">
                         <label asp-for="MenuItem.SubCategoryId" class="text-info font-weight-bold"></label>
@@ -59,14 +60,14 @@
                         <input asp-for="MenuItem.SubCategory.Name" readonly class="form-control" />
                     </div>
                 </div>*@
-            @*<div class="form-group row">
+            <div class="form-group row">
                     <div class="col-md-4">
-                        <label asp-for="MenuItem.Spicyness" class="text-info font-weight-bold"></label>
+                        <label  class="text-info font-weight-bold">Available Qty</label>
                     </div>
                     <div class="col-md-8">
-                        <select asp-for="MenuItem.Spicyness" disabled asp-items="Html.GetEnumSelectList<MenuItem.ESpicy>()" class="form-control"></select>
+                        <input asp-for="StockMaster.Qty" readonly class="form-control" />
                     </div>
-                </div>*@
+                </div>
             <div class="form-group row">
                 <div class="col-md-4">
                     <label asp-for="Qty" class="text-info font-weight-bold"></label>

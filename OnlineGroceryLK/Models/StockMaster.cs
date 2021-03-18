@@ -13,6 +13,11 @@ namespace OnlineGroceryLK.Models
 
         public string Description { get; set; }
 
+        [Display(Name = "Supplier")]
+        public string SupplierId { get; set; }
+        [NotMapped]
+        [ForeignKey("SupplierId")]
+        public virtual ApplicationUser Supplier { get; set; }
         public string Image { get; set; }
 
         [Display(Name = "Category")]

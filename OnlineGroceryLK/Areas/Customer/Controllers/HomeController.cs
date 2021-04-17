@@ -62,9 +62,9 @@ namespace OnlineGroceryLK.Controllers
             {
                 StockMaster = menuItemFromDb,
                 StockMasterId = menuItemFromDb.Id,
-                //Product = menuItemFromDb.Product,
+                ProductName = menuItemFromDb.Product.Name,
                 //ProductId = menuItemFromDb.ProductId
-                
+
 
             };
 
@@ -88,6 +88,11 @@ namespace OnlineGroceryLK.Controllers
                 ShoppingCart cartFromDb = await _db.ShoppingCart.Where(c => c.ApplicationUserId == CartObject.ApplicationUserId
                                                 && c.StockMasterId == CartObject.StockMasterId).FirstOrDefaultAsync();
 
+
+
+                var menuItemFromDb = await _db.StockMaster.Include(m => m.Category).Include(m => m.Product).Where(m => m.Id == CartObject.StockMasterId).FirstOrDefaultAsync();
+                CartObject.ProductName = menuItemFromDb.Product.Name.ToString(); ;
+
                 if (cartFromDb == null)
                 {
                     await _db.ShoppingCart.AddAsync(CartObject);
@@ -96,6 +101,7 @@ namespace OnlineGroceryLK.Controllers
                 {
                     cartFromDb.Qty = cartFromDb.Qty + CartObject.Qty;
                 }
+                //    cartFromDb.ProductName = cartFromDb.StockMaster.Product.Name.ToString();
                 await _db.SaveChangesAsync();
 
                 var count = _db.ShoppingCart.Where(c => c.ApplicationUserId == CartObject.ApplicationUserId).ToList().Count();

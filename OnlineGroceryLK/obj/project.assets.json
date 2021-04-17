@@ -8983,7 +8983,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet": {}
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -8995,7 +8995,7 @@
       "outputPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\Isuru Dissanayaka\\AppData\\Roaming\\NuGet\\NuGet.Config",

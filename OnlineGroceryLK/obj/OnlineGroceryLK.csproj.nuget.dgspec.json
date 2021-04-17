@@ -14,7 +14,7 @@
         "outputPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Isuru Dissanayaka\\AppData\\Roaming\\NuGet\\NuGet.Config",

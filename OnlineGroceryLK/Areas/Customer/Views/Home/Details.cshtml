@@ -4,99 +4,117 @@
 @{ ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<br />
-<h2 class="text-info">Item Details</h2>
-<br />
 
-<form method="post">
-    <div class="border backgroundWhite row">
 
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="col-12 pb-4 d-md-none">
-            <img src="@Model.StockMaster.Image" width="100%" style="border-radius:5px;border: 1px solid #bbb9b9;" />
+    <section class="htc__product__details pt--50 pb--100 bg__white">
+        <div class="container">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="row">
+                    <div class="col-md-2 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="product__details__container">
+                            <!-- Start Small images -->
+                            <!-- End Small images -->
+                            <div class="product__big__images">
+                                <div class="portfolio-full-image tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active product-video-position" id="img-tab-1">
+                                        <img src="@Model.StockMaster.Image" alt="full-image">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 smt-30 xmt-30">
+                        <div class="htc__product__details__inner">
+                            <div class="pro__detl__title">
+                                <h2>@Model.StockMaster.Product.Name</h2>
+                            </div>
+                            <div class="pro__dtl__rating">
+                                <ul class="pro__rating">
+                                    <li><span class="ti-star"></span></li>
+                                    <li><span class="ti-star"></span></li>
+                                    <li><span class="ti-star"></span></li>
+                                    <li><span class="ti-star"></span></li>
+                                    <li><span class="ti-star"></span></li>
+                                </ul>
+                                @*<span class="rat__qun">(@Model.StockMaster.Supplier)</span>*@
+                            </div>
+                            <div class="pro__details">
+                                <p>@Model.StockMaster.Description</p>
+                            </div>
+
+                            @*<div class="pro__details">
+                                <input asp-for="StockMaster.Category.Name" readonly class="form-control" />
+                            </div>*@
+                            <ul class="pro__dtl__prize">
+                                @*<li class="old__prize">$15.21</li>*@
+                                <li>Rs.@Model.StockMaster.Price.00</li>
+
+                            </ul>
+
+
+                            <div class="product-action-wrap">
+                                <div class="prodict-statas"><span>Available Quantity :</span></div>
+                                <div class="product-quantity">
+                                    <div class="product-quantity">
+                                        <div class="cart-plus-minus">
+                                            <input asp-for="StockMaster.Qty" class="cart-plus-minus-box" type="text" name="qtybutton" readonly />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-action-wrap">
+                                <div class="prodict-statas"><span>Quantity :</span></div>
+                                <div class="product-quantity">
+                                    <div class="product-quantity">
+                                        <div class="cart-plus-minus">
+                                            <input asp-for="Qty" class="cart-plus-minus-box" type="text" name="qtybutton" value="01" />
+
+                                            <div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pro__dtl__btn">
+
+
+                                <li class="buy__now__btn">
+                                    <button type="submit" value="Add to Cart" class="btn btn-primary form-control">Add to Cart</button>
+                                </li>
+                                <li class="buy__now__btn">
+                                    @*<a asp-action="Index">Back to List</a>*@
+                                    <button type="submit" asp-action="Index" value="Add to Cart" class="btn btn-primary form-control">Back to List</button>
+                                </li>
+
+                                <li><a href="#"><span class="ti-heart"></span></a></li>
+                                <li><a href="#"><span class="ti-email"></span></a></li>
+                            </ul>
+                            <div class="pro__social__share">
+                                <h2>Share :</h2>
+                                <ul class="pro__soaial__link">
+                                    <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input asp-for="StockMasterId" hidden />
+                <input asp-for="StockMaster.Price" hidden />
+
+            </form>
         </div>
-        <div class="col-md-8">
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label asp-for="@Model.StockMaster.Product.Name" class="text-info font-weight-bold"></label>
-                </div>
-                <div class="col-md-8">
-                    <input asp-for="StockMaster.Product.Name" readonly class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label asp-for="StockMaster.Description" class="text-info font-weight-bold"></label>
-                </div>
-                <div class="col-md-8">
-                    <div class="border p-2">
-                        @Html.Raw(Model.StockMaster.Description)
-                    </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label asp-for="StockMaster.Price" class="text-info font-weight-bold"></label>
-                </div>
-                <div class="col-md-8">
-                    <input asp-for="StockMaster.Price" readonly class="form-control" />
-                </div>
 
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label asp-for="StockMaster.CategoryId" class="text-info font-weight-bold"></label>
-                </div>
-                <div class="col-md-8">
-                    <input asp-for="StockMaster.Category.Name" readonly class="form-control" />
-                </div>
-            </div>
-            
-            @*<div class="form-group row">
-                    <div class="col-md-4">
-                        <label asp-for="MenuItem.SubCategoryId" class="text-info font-weight-bold"></label>
-                    </div>
-                    <div class="col-md-8">
-                        <input asp-for="MenuItem.SubCategory.Name" readonly class="form-control" />
-                    </div>
-                </div>*@
-            <div class="form-group row">
-                    <div class="col-md-4">
-                        <label  class="text-info font-weight-bold">Available Qty</label>
-                    </div>
-                    <div class="col-md-8">
-                        <input asp-for="StockMaster.Qty" readonly class="form-control" />
-                    </div>
-                </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                    <label asp-for="Qty" class="text-info font-weight-bold"></label>
-                </div>
-                <div class="col-md-8">
-                    <input asp-for="Qty" class="form-control" />
-                    <span asp-validation-for="Qty" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
-                </div>
-                <div class="col-md-4">
-                    <button type="submit" value="Add to Cart" class="btn btn-primary form-control">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 offset-1 d-none d-md-block">
-            <img src="@Model.StockMaster.Image" width="100%" style="border-radius:5px;border: 1px solid #bbb9b9;" />
-        </div>
+    </section>
 
 
 
-    </div>
-    <input asp-for="StockMasterId" hidden />
-</form>
+
 
 @section Scripts{
 

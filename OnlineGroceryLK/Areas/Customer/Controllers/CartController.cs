@@ -25,7 +25,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
         [BindProperty]
         public OrderDetailsCart detailCart { get; set; }
 
-        public CartController(ApplicationDbContext db,IEmailSender emailSender)
+        public CartController(ApplicationDbContext db, IEmailSender emailSender)
         {
             _db = db;
             _emailSender = emailSender;
@@ -45,23 +45,23 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
             var cart = _db.ShoppingCart.Where(c => c.ApplicationUserId == claim.Value);
-            if(cart !=null)
+            if (cart != null)
             {
                 detailCart.listCart = cart.ToList();
             }
 
-            foreach(var list in detailCart.listCart)
+            foreach (var list in detailCart.listCart)
             {
                 list.StockMaster = await _db.StockMaster.FirstOrDefaultAsync(m => m.Id == list.StockMasterId);
                 detailCart.OrderHeader.OrderTotal = detailCart.OrderHeader.OrderTotal + (list.StockMaster.Price * list.Qty);
                 list.StockMaster.Description = SD.ConvertToRawHtml(list.StockMaster.Description);
-                if(list.StockMaster.Description.Length>100)
+                if (list.StockMaster.Description.Length > 100)
                 {
                     list.StockMaster.Description = list.StockMaster.Description.Substring(0, 99) + "...";
                 }
             }
             detailCart.OrderHeader.OrderTotalOriginal = detailCart.OrderHeader.OrderTotal;
-            
+
             //if(HttpContext.Session.GetString(SD.ssCouponCode)!=null)
             //{
             //    detailCart.OrderHeader.CouponCode = HttpContext.Session.GetString(SD.ssCouponCode);
@@ -98,7 +98,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             {
                 list.StockMaster = await _db.StockMaster.FirstOrDefaultAsync(m => m.Id == list.StockMasterId);
                 detailCart.OrderHeader.OrderTotal = detailCart.OrderHeader.OrderTotal + (list.StockMaster.Price * list.Qty);
-               
+
             }
             detailCart.OrderHeader.OrderTotalOriginal = detailCart.OrderHeader.OrderTotal;
             detailCart.OrderHeader.PickupName = applicationUser.Name;
@@ -145,7 +145,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
 
             foreach (var item in detailCart.listCart)
             {
-                item.StockMaster = await _db.StockMaster.FirstOrDefaultAsync(m => m.Id == item.StockMasterId );
+                item.StockMaster = await _db.StockMaster.FirstOrDefaultAsync(m => m.Id == item.StockMasterId);
                 OrderDetails orderDetails = new OrderDetails
                 {
                     StockMasterId = item.StockMasterId,
@@ -214,7 +214,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
 
         public IActionResult AddCoupon()
         {
-            if(detailCart.OrderHeader.CouponCode==null)
+            if (detailCart.OrderHeader.CouponCode == null)
             {
                 detailCart.OrderHeader.CouponCode = "";
             }
@@ -225,8 +225,8 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
 
         public IActionResult RemoveCoupon()
         {
-            
-            HttpContext.Session.SetString(SD.ssCouponCode,string.Empty);
+
+            HttpContext.Session.SetString(SD.ssCouponCode, string.Empty);
 
             return RedirectToAction(nameof(Index));
         }
@@ -243,7 +243,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
         public async Task<IActionResult> Minus(int cartId)
         {
             var cart = await _db.ShoppingCart.FirstOrDefaultAsync(c => c.Id == cartId);
-            if(cart.Qty==1)
+            if (cart.Qty == 1)
             {
                 _db.ShoppingCart.Remove(cart);
                 await _db.SaveChangesAsync();
@@ -274,7 +274,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-       
+
 
 
 

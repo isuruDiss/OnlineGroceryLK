@@ -65,7 +65,10 @@
                                     <li class="drop">
                                         <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                     </li>
-                                    <li><a href="contact.html">My Orders</a></li>
+                                    <li>
+                                        <a asp-action="Index" asp-controller="Order" asp-area="Customer">My Orders</a>
+
+                                    </li>
                                     <li><a href="contact.html">Shop</a></li>
 
                                     @if (User.IsInRole(SD.Admin))

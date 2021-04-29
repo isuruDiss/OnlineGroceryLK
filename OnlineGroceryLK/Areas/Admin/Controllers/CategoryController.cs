@@ -19,6 +19,11 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
             _db = db;
         }
 
+        public CategoryController()
+        {
+
+        }
+
         //GET Method
         public async Task<IActionResult> Index()
         {

@@ -65,11 +65,38 @@
                                     <li class="drop">
                                         <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                     </li>
-                                    <li>
-                                        <a asp-action="Index" asp-controller="Order" asp-area="Customer">My Orders</a>
+                                    @if (User.IsInRole(SD.CustomerEndUser))
+                                    {
+                                        <li>
+                                            <a asp-action="OrderHistory" asp-controller="Order" asp-area="Customer">My Orders</a>
 
-                                    </li>
-                                    <li><a href="contact.html">Shop</a></li>
+                                        </li>
+                                    }
+
+
+                                    @if (User.IsInRole(SD.Admin) || User.IsInRole(SD.Supplier))
+                                    {
+
+
+                                        <li class="drop">
+                                            <a id="navbarDropDownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                               Orders
+                                            </a>
+                                            <ul class="dropdown">
+                                              
+                                                <li>
+                                                    <a class="dropdown-item" asp-action="OrderPickup" asp-controller="Order" asp-area="Customer">Order Pickup</a>
+
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" asp-action="ManageOrder" asp-controller="Order" asp-area="Customer">Manage Order</a>
+
+                                                </li>
+                                            </ul>
+
+                                        </li>
+
+                                    }
 
                                     @if (User.IsInRole(SD.Admin))
                                     {

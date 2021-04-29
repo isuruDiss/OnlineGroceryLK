@@ -136,7 +136,60 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
         }
 
 
+        [Authorize]
+        public async Task<IActionResult> OrderHistory()
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
+
+            OrderListViewModel orderListVM = new OrderListViewModel()
+            {
+                Orders = new List<OrderDetailsViewModel>()
+            };
+
+
+
+            List<OrderHeader> OrderHeaderList = await _db.OrderHeader.Include(o => o.ApplicationUser).Where(u => u.UserId == claim.Value).ToListAsync();
+
+            foreach (OrderHeader item in OrderHeaderList)
+            {
+                OrderDetailsViewModel individual = new OrderDetailsViewModel
+                {
+                    OrderHeader = item,
+                    OrderDetails = await _db.OrderDetails.Where(o => o.OrderId == item.Id).ToListAsync()
+                };
+                orderListVM.Orders.Add(individual);
+            }
+
+
+            return View(orderListVM);
+
+        }
+
+        [Authorize(Roles = SD.Admin + "," + SD.Supplier)]
+        public async Task<IActionResult> ManageOrder()
+        {
+
+            List<OrderDetailsViewModel> orderDetailsVM = new List<OrderDetailsViewModel>();
+
+            List<OrderHeader> OrderHeaderList = await _db.OrderHeader.Where(o => o.Status == SD.StatusSubmitted || o.Status == SD.StatusInProcess).OrderByDescending(u => u.PickUpTime).ToListAsync();
+
+
+            foreach (OrderHeader item in OrderHeaderList)
+            {
+                OrderDetailsViewModel individual = new OrderDetailsViewModel
+                {
+                    OrderHeader = item,
+                    OrderDetails = await _db.OrderDetails.Where(o => o.OrderId == item.Id).ToListAsync()
+                };
+                orderDetailsVM.Add(individual);
+            }
+
+
+
+            return View(orderDetailsVM.OrderBy(o => o.OrderHeader.PickUpTime).ToList());
+        }
 
         //[Authorize(Roles = SD.KitchenUser + "," + SD.ManagerUser)]
         //public async Task<IActionResult> OrderPrepare(int OrderId)

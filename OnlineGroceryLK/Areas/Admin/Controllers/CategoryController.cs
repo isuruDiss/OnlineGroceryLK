@@ -42,7 +42,8 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
                 _db.Category.Add(category);
                 await _db.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return View();
 
             }
             return View(category);

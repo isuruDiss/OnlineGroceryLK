@@ -74,7 +74,6 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
 
         }
 
-
         public async Task<IActionResult> Summary()
         {
 
@@ -117,6 +116,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             return View(detailCart);
 
         }
+
 
 
         [HttpPost]

@@ -13,9 +13,9 @@ namespace UnitTestOnlineGroceryLK
         [TestMethod]
         public async Task CreateProduct()
         {
-            CategoryController controller = new CategoryController();
+            ProductController controller = new ProductController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result = await controller.Create() as ViewResult;
             // Assert
             Assert.IsNotNull(result);
 
@@ -25,9 +25,9 @@ namespace UnitTestOnlineGroceryLK
         public async Task UpdateProduct()
         {
             // arrange
-            CategoryController controller = new CategoryController();
+            ProductController controller = new ProductController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result =await controller.Edit(5) as ViewResult;
             // Assert
             Assert.IsNotNull(result);
 
@@ -38,9 +38,9 @@ namespace UnitTestOnlineGroceryLK
         public async Task DeleteProduct()
         {
             // arrange
-            CategoryController controller = new CategoryController();
+            ProductController controller = new ProductController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result =await controller.Delete(5) as ViewResult;
             // Assert
             Assert.IsNotNull(result);
         }
@@ -49,9 +49,9 @@ namespace UnitTestOnlineGroceryLK
         public async Task DetailsProduct()
         {
             // arrange
-            CategoryController controller = new CategoryController();
+            ProductController controller = new ProductController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result =await controller.Details(6) as ViewResult;
             // Assert
             Assert.IsNotNull(result);
         }

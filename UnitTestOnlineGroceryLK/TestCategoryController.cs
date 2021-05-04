@@ -27,7 +27,7 @@ namespace UnitTestOnlineGroceryLK
             // arrange
             CategoryController controller = new CategoryController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result =await controller.Edit(5) as ViewResult;
             // Assert
             Assert.IsNotNull(result);
         }
@@ -38,7 +38,7 @@ namespace UnitTestOnlineGroceryLK
             // arrange
             CategoryController controller = new CategoryController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result =await controller.Delete(5) as ViewResult;
             // Assert
             Assert.IsNotNull(result);
         }
@@ -49,7 +49,7 @@ namespace UnitTestOnlineGroceryLK
             // arrange
             CategoryController controller = new CategoryController();
 
-            ViewResult result = controller.Create() as ViewResult;
+            ViewResult result =await controller.Details(5) as ViewResult;
             // Assert
             Assert.IsNotNull(result);
         }

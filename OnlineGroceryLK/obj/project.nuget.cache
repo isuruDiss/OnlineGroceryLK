@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/o83cC0G0EEk4Vy+fyh6NYboqEiW9RHVTaK2ogrbJCw4wH79afVBhqNfabUVz6J2grdWVP8McvpF8AsjPmg2SQ==",
+  "dgSpecHash": "NZF1vnOWE/5ahc+gPzvpGblBTiGL+EIPnQYYl4RI6LI3x/xBClQtRBt7OBdCG8vnOC5UUv4SAhLZoYGPnnr/yg==",
   "success": true,
   "projectFilePath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
   "expectedPackageFiles": [
@@ -89,6 +89,7 @@
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\stripe.net\\39.39.0\\stripe.net.39.39.0.nupkg.sha512",
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

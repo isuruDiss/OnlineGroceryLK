@@ -1,0 +1,68 @@
+﻿@model OnlineGroceryLK.Models.Category
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="categories-slider-area bg__white">
+
+    <div class="container" style="padding-bottom:5%; padding-top:5%">
+        <h2 class="text-info" style="padding-bottom:5%">Edit Category</h2>
+
+        <form method="post" asp-action="Edit">
+            <div class="border backgroundWhite">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Name" class="col-form-label"></label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label class="col-form-label">Category Type</label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Category_Type" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Category_Type" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label class="col-form-label">Category Code</label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Category_Code" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Category_Code" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label class="col-form-label">Decription</label>
+                    </div>
+                    <div class="col-5">
+                        <input asp-for="Category_Decription" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Category_Decription" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-10 offset-2" style="padding-left:50%">
+                        <partial name="_EditAndBackToListButton" model="Model.Id" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

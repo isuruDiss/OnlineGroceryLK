@@ -3,11 +3,16 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnlineGroceryLK.Data;
+using OnlineGroceryLK.Utility;
+using Spice.Service;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,16 +29,31 @@ namespace OnlineGroceryLK
 
         public IConfiguration Configuration { get; }
 
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                          //.AddDefaultUI(UIFramework.Boostrap4)
+                          .AddDefaultTokenProviders()
+                          .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddSingleton<IEmailSender, EmailSender>();
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.IsEssential = true;
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,10 +74,10 @@ namespace OnlineGroceryLK
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -14,7 +14,7 @@
         "outputPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Isuru Dissanayaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,6 +73,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.39.0, )"
             }
           },
           "imports": [

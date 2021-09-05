@@ -2,25 +2,43 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+<ul class="menu-extra">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> @User.Identity.Name</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link ">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+<ul class="menu-extra">
+    <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
+    @*<li>
+        <a class="nav-link " asp-area="Identity" asp-page="/Account/Register">
+            <span class="ti-user"></span>
+        </a>
+    </li>*@
+    <li>
+        <a class="nav-link " asp-area="Identity" asp-page="/Account/Login">
+            <span class="ti-user"></span>
+        </a>
     </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link " asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link " asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+    @*<li class="cart__menu"><span class="ti-shopping-cart"></span></li>*@
+    <li class="toggle__menu hidden-xs hidden-sm"><span class="ti-menu"></span></li>
+</ul>
+
+
+
+        @*<li class="nav-item">
+            <a class="nav-link " asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>*@
+    }
 </ul>

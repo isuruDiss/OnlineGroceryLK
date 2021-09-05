@@ -19,6 +19,11 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
             _db = db;
         }
 
+        public CategoryController()
+        {
+
+        }
+
         //GET Method
         public async Task<IActionResult> Index()
         {
@@ -42,7 +47,8 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
                 _db.Category.Add(category);
                 await _db.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return View();
 
             }
             return View(category);

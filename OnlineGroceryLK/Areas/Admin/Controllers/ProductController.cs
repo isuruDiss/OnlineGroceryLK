@@ -26,6 +26,10 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
             _db = db;
         }
 
+        public ProductController()
+        {
+        }
+
         //Get INDEX
         public async Task<IActionResult> Index()
         {
@@ -62,6 +66,7 @@ namespace OnlineGroceryLK.Areas.Admin.Controllers
                 else
                 {
                     _db.Product.Add(model.Product);
+             
                     await _db.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }

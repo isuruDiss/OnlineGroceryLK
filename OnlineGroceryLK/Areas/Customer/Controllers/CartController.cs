@@ -74,7 +74,6 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
 
         }
 
-
         public async Task<IActionResult> Summary()
         {
 
@@ -117,6 +116,7 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             return View(detailCart);
 
         }
+
 
 
         [HttpPost]
@@ -207,8 +207,8 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             }
 
             await _db.SaveChangesAsync();
-            return RedirectToAction("Index", "Home");
-            ////return RedirectToAction("Confirm", "Order" , new { id = detailCart.OrderHeader.Id });
+            //return RedirectToAction("Index", "Home");
+            return RedirectToAction("Confirm", "Order", new { id = detailCart.OrderHeader.Id });
         }
 
 
@@ -274,11 +274,12 @@ namespace OnlineGroceryLK.Areas.Customer.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
-
-
-
+     
 
 
     }
 }
+
+
+
+    

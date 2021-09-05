@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineGroceryLK", "OnlineGroceryLK\OnlineGroceryLK.csproj", "{A2778B5C-F4A4-4EEC-A562-44DEF38D84B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineGroceryLK", "OnlineGroceryLK\OnlineGroceryLK.csproj", "{A2778B5C-F4A4-4EEC-A562-44DEF38D84B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestOnlineGroceryLK", "UnitTestOnlineGroceryLK\UnitTestOnlineGroceryLK.csproj", "{C60ABD3F-83CD-4386-A8AD-3C3206E4896A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A2778B5C-F4A4-4EEC-A562-44DEF38D84B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2778B5C-F4A4-4EEC-A562-44DEF38D84B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2778B5C-F4A4-4EEC-A562-44DEF38D84B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C60ABD3F-83CD-4386-A8AD-3C3206E4896A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60ABD3F-83CD-4386-A8AD-3C3206E4896A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60ABD3F-83CD-4386-A8AD-3C3206E4896A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60ABD3F-83CD-4386-A8AD-3C3206E4896A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

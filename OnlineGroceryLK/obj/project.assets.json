@@ -8982,23 +8982,29 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\dkottawagamage\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
+      "projectUniqueName": "C:\\Users\\dkottawagamage\\Documents\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
       "projectName": "OnlineGroceryLK",
-      "projectPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
-      "packagesPath": "C:\\Users\\Isuru Dissanayaka\\.nuget\\packages\\",
-      "outputPath": "E:\\Personal\\SLIIT\\MSc IT\\SEP\\Project\\OnlineGrocerylk\\OnlineGroceryLK\\obj\\",
+      "projectPath": "C:\\Users\\dkottawagamage\\Documents\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\OnlineGroceryLK.csproj",
+      "packagesPath": "C:\\Users\\dkottawagamage\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dkottawagamage\\Documents\\OnlineGrocery\\OnlineGroceryLK\\OnlineGroceryLK\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Isuru Dissanayaka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dkottawagamage\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -9006,6 +9012,7 @@
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -9078,7 +9085,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
